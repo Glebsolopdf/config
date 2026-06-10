@@ -1,0 +1,95 @@
+* {
+    border: none;
+    font-family: "JetBrainsMono Nerd Font", "Cascadia Code", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+#workspaces,
+#mpris,
+#clock,
+#network-box,
+#tray,
+#system,
+#hardware {
+    background: rgba(10, 22, 15, 0.82);
+    border: 1px solid rgba(52, 211, 153, 0.15);
+    border-radius: 5px;
+    color: #FFFFFF;
+    margin: 0 4px;
+    padding: 1px 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+#workspaces:hover,
+#mpris:hover,
+#clock:hover,
+#network-box:hover,
+#tray:hover,
+#system:hover,
+#hardware:hover {
+    background: rgba(16, 37, 26, 0.95);
+    border-color: rgba(52, 211, 153, 0.4);
+    box-shadow: 0 0 8px rgba(52, 211, 153, 0.1);
+}
+
+#language,
+#pulseaudio,
+#network.icon,
+#network.speed,
+#custom-gpu,
+#cpu,
+#temperature,
+#memory {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0 6px;
+}
+
+#system #language,
+#hardware #custom-gpu,
+#hardware #temperature {
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+    padding-right: 8px;
+    margin-right: 4px;
+}
+
+#workspaces {
+    padding: 1px 4px;
+}
+
+#workspaces button {
+    color: rgba(255, 255, 255, 0.35);
+    padding: 0 4px;
+    transition: all 0.15s ease;
+}
+
+#workspaces button.active {
+    color: #10B981;
+}
+
+#workspaces button:hover {
+    color: #34D399;
+    background: transparent;
+}
+
+#temperature.critical {
+    color: #EF4444;
+    animation: blink-alert 2.5s infinite ease-in-out;
+}
+
+@keyframes blink-alert {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; color: #EF4444; }
+    100% { opacity: 1; }
+}
+
+#mpris {
+    color: #E2E8F0;
+}
